@@ -1,5 +1,8 @@
+<script setup>
+import paginaUsuario from '@/components/Pagina-Usuario/paginaUsuario.vue'
+</script>
 <template>
-    <div>
-        <h1>Aqui veras la pagina del usuario</h1>
-    </div>
+  <div>
+    <paginaUsuario />
+  </div>
 </template>

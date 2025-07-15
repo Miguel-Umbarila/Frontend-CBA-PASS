@@ -6,14 +6,27 @@ import { RouterLink, RouterView } from 'vue-router'
   <div class="wrapper">
     <header>
       <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <img src="/logoUno.jpg" alt="" class="logo">
+        <img src="/public/cpas.png" alt="" class="logo" />
         <div class="container-fluid">
-          <RouterLink to="/Inicio"> Home</RouterLink>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarScroll"
+            aria-controls="navbarScroll"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarScroll">
-            <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+            <ul
+              class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll"
+              style="--bs-scroll-height: 100px"
+            >
+              <li>
+                <RouterLink to="/Inicio"> Home</RouterLink>
+              </li>
               <li class="nav-item">
                 <RouterLink to="/form"> Login</RouterLink>
               </li>
@@ -23,15 +36,20 @@ import { RouterLink, RouterView } from 'vue-router'
               <li class="nav-item dropdown">
                 <RouterLink to="/inicio-sesion"> Sign-up</RouterLink>
                 <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Action</a></li>
-                  <li><a class="dropdown-item" href="#">Another action</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                  <li><a class="dropdown-item" href="#">Home</a></li>
+                  <li><a class="dropdown-item" href="#">Login</a></li>
+                  <li><hr class="dropdown-divider" /></li>
+                  <li><a class="dropdown-item" href="#">Sign-up</a></li>
                 </ul>
               </li>
             </ul>
             <form class="d-flex" role="search">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
+              <input
+                class="form-control me-2"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+              />
               <button class="btn btn-outline-success" type="submit">Search</button>
             </form>
           </div>
@@ -54,7 +72,6 @@ header {
   margin: 3rem;
   border-radius: 20rem;
   width: 7rem;
-  
 }
 
 nav {
@@ -67,7 +84,7 @@ nav {
 }
 
 nav a.router-link-exact-active {
-  color: var(--color-text);
+  color: green;
 }
 
 nav a {

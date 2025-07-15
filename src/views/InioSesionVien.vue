@@ -1,12 +1,9 @@
 <template>
-    <div>
-        <h1>Aqui veras el inicio de sesion del usuario</h1>
-        <formSigin/>
-        <BotonSigin/>
-    </div>
+  <div>
+    <formSig />
+  </div>
 </template>
 
 <script setup>
-import formSigin from '@/components/Singin/formSigin.vue';
-import BotonSigin from '@/components/Singin/BotonSigin.vue';
+import formSig from '@/components/Sigin/formSig.vue'
 </script>
