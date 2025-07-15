@@ -75,20 +75,21 @@
 .formulario {
   display: flex;
   justify-content: center;
-  padding: 5rem;
+  padding: 2rem;
 }
 #form {
   border: 2px solid black;
   border-radius: 50px;
   padding: 2rem;
   width: 40rem;
+  background: linear-gradient(to bottom, rgb(5, 155, 172, 255), rgb(123, 216, 88, 255));
 }
 #form #imag {
   width: 100%;
 }
 #form #imag img {
-  width: 15rem;
-  height: 15rem;
+  width: 13rem;
+  height: 13rem;
   padding-bottom: 8px;
   border-radius: 120px;
   margin: 0 auto;

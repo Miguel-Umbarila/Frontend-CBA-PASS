@@ -50,7 +50,7 @@
 .formulario {
   display: flex;
   justify-content: center;
-  padding: 5rem;
+  padding: 2rem;
 }
 #form {
   border: 2px solid black;
