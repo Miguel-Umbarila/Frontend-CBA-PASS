@@ -69,27 +69,6 @@
   </div>
 </template>
 
-<script setup>
-import { ref, onMounted } from 'vue'
-import axios from 'axios'
-
-const tareas = ref([])
-
-onMounted(async () => {
-  const response = await axios.get('http://127.0.0.1:8000/admin/auth/user/')
-  tareas.value = response.data
-})
-</script>
-
-<template>
-  <h1>Lista de Tareas</h1>
-  <ul>
-    <li v-for="tarea in tareas" :key="tarea.id">
-      {{ tarea.titulo }} - {{ tarea.completado ? '✔️' : '❌' }}
-    </li>
-  </ul>
-</template>
-
 <style>
 .formulario {
   display: flex;
