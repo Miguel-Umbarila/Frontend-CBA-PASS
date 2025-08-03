@@ -38,13 +38,14 @@
         <button type="button" class="btn btn-success">Ingresar</button>
       </div>
       <div>
-        <a href="">Ya tienes cuenta? Inicia Sesion</a>
+        <!-- <a href="">Ya tienes cuenta? Inicia Sesion</a> -->
+        <router-link to="/form">No te has Registrado? Registrate</router-link>
       </div>
     </form>
   </div>
 </template>
 
-<script></script>
+<script setup></script>
 
 <style>
 .formulario {

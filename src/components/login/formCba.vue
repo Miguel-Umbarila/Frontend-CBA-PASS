@@ -63,11 +63,13 @@
         <button type="button" class="btn btn-success">Siguiente</button>
       </div>
       <div>
-        <a href="">Ya tienes cuenta? Inicia Sesion</a>
+        <router-link to="/inicio-sesion">Ya tienes cuenta? Inicia Sesion</router-link>
       </div>
     </form>
   </div>
 </template>
+
+<script setup></script>
 
 <style>
 .formulario {
