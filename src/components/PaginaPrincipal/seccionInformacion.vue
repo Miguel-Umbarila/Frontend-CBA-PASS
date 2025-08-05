@@ -1,101 +1,109 @@
 <template>
-  <div class="infromacion-uno">
-    <section class="row" id="filaUno">
-      <div class="col-6">
-        <img src="/public/prueba.jpg" alt="" id="imagenUno" />
+  <div class="section">
+    <section class="content">
+      <div class="image-container">
+        <img src="/public/prueba.jpg" alt="Imagen sobre quienes somos" class="image" />
       </div>
-      <div class="col-6" id="textUno">
-        <h1>Quienes somos?</h1>
+      <div class="text-container">
+        <h1>¿Quiénes somos?</h1>
         <p>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Modi nisi laborum dignissimos
-          perferendis ad ut eligendi ipsa beatae commodi labore id, eveniet magni, enim sint
-          cupiditate nobis libero nihil culpa!
+          Somos una organización comprometida con la innovación y el acceso inteligente. Nuestro objetivo es brindar soluciones modernas y eficientes que mejoren la experiencia de todos los usuarios.
         </p>
       </div>
     </section>
   </div>
-  <div class="infromacionDos">
-    <section class="row" id="filaDos">
-      <div class="col-6" id="textDos">
-        <h1>Porque CBA PASS?</h1>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque facilis provident culpa
-          facere illum iure molestiae sint error, pariatur sapiente cumque voluptates consequuntur
-          hic eveniet asperiores labore amet dolore sit!
-        </p>
+
+  <div class="section">
+    <section class="content reverse">
+      <div class="image-container">
+        <img src="/public/prueba.jpg" alt="Imagen de CBA PASS" class="image" />
       </div>
-      <div class="col-6">
-        <img src="/public/prueba.jpg" alt="" id="imagenDos" />
+      <div class="text-container">
+        <h1>¿Por qué CBA PASS?</h1>
+        <p>
+          Porque creemos en la seguridad, accesibilidad y tecnología como pilares fundamentales para un acceso más eficiente y personalizado. CBA PASS conecta a las personas con soluciones reales.
+        </p>
       </div>
     </section>
   </div>
 </template>
 
 <style>
-.infromacion-uno {
-  padding: 3rem;
+/* DISEÑO GENERAL */
+.section {
   width: 100%;
-  position: static;
+  padding: 4rem 1.5rem;
+  background-color: #f8f9fa;
+  display: flex;
   justify-content: center;
-  align-items: center;
-}
-.infromacion-uno #filaUno {
-  border: 2px solid black;
-  border-radius: 50px;
-  margin: 0 auto;
-  padding: 2rem;
-  justify-content: space-between;
-  width: 70rem;
-  align-items: center;
-}
-#imagenUno {
-  width: 30rem;
-  height: 25rem;
-  border-radius: 20px;
-}
-#textUno {
-  height: 20rem;
-  width: 30rem;
-  position: relative;
-  text-align: center;
-}
-#textUno h1 {
-  text-align: center;
-  font-family: Georgia, 'Times New Roman', Times, serif;
-  margin-bottom: 6rem;
 }
 
-/* segunda seccion */
-.infromacionDos {
-  padding: 3rem;
+.content {
+  display: flex;
+  flex-direction: row;
+  max-width: 1200px;
   width: 100%;
-  position: static;
-  justify-content: center;
+  gap: 3rem;
   align-items: center;
+  background: white;
+  padding: 3rem;
+  border-radius: 2rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
 }
-.infromacionDos #filaDos {
-  border: 2px solid black;
-  border-radius: 50px;
-  margin: 0 auto;
-  padding: 2rem;
-  justify-content: space-between;
-  width: 70rem;
-  align-items: center;
+
+.content.reverse {
+  flex-direction: row-reverse;
 }
-#imagenDos {
-  width: 30rem;
-  height: 25rem;
-  border-radius: 20px;
+
+.image-container {
+  flex: 1;
 }
-#textDos {
-  width: 30rem;
-  height: 20rem;
-  position: relative;
-  text-align: center;
+
+.image {
+  width: 100%;
+  height: auto;
+  border-radius: 1.5rem;
+  object-fit: cover;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
 }
-#textDos h1 {
-  text-align: center;
-  font-family: Georgia, 'Times New Roman', Times, serif;
-  margin-bottom: 6rem;
+
+.text-container {
+  flex: 1;
+  text-align: left;
+}
+
+.text-container h1 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  font-family: 'Georgia', serif;
+  color: #212529;
+}
+
+.text-container p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #495057;
+}
+
+/* RESPONSIVO */
+@media (max-width: 992px) {
+  .content {
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem;
+  }
+
+  .content.reverse {
+    flex-direction: column;
+  }
+
+  .text-container h1 {
+    font-size: 1.8rem;
+  }
+
+  .text-container p {
+    font-size: 1rem;
+  }
 }
 </style>
