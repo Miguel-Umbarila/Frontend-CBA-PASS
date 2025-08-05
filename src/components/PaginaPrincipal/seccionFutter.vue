@@ -1,38 +1,71 @@
 <template>
-        <section class="row" id="flutter">
-            <div class="col-6" id="filaUno">
-                <ul>
-                    <li>miguelumbarila321@gmail.com</li>
-                    <li>Correo Dos</li>
-                    <li>Correo Tres</li>
-                    <li>Correo Cuatro</li>
-                </ul>
-            </div>
-            <div class="col-6" id="filaDos">
-                <ul>
-                    <li>3245334699</li>
-                    <li>Numero de Contacto</li>
-                    <li>Numero de Contacto</li>
-                    <li>Numero de Contacto</li>
-                </ul>
-            </div>
-        </section>
+<div>
+  <table class="table" >
+    <thead>
+      <tr>
+        <th scope="col"></th>
+        <th scope="col">Correo</th>
+        <th scope="col">Numero</th>
+
+      </tr>
+    </thead>
+    <tbody class="table-group-divider">
+      <tr>
+        <th scope="row"></th>
+        <td>miguelumbarila321@gmail.com</td>
+        <td>3245334699</td>
+
+      </tr>
+      <tr>
+        <th scope="row"></th>
+        <td>jhonatan@mail.com</td>
+        <td>3193831573</td>
+
+      </tr>
+      <tr>
+        <th scope="row"></th>
+        <td>Santiagocan@gmail.com</td>
+        <td>3184450527</td>
+
+      </tr>
+      <tr>
+        <th scope="row"></th>
+        <td>santiagosalamanca@gmail.com</td>
+        <td>3186129836</td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="boton">
+    <button>Descargar</button>
+  </div>
+</div>
 </template>
 
 <style>
 
+
 #flutter{
-    position: relative;
     width: 100%;
-    align-items: center;
-    background: rgba(21, 174, 221, 0.644);
-    padding: 5rem;
+    background: linear-gradient(to bottom, #59c3d3, #a1e891);
 }
 #filaUno{
-    width: 50rem;
+    width: 50%;
 }
 #filaDos{
-    width: 50rem;
+    width: 50%;
+}
+
+.boton{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.boton button{
+  background: linear-gradient(to bottom, #59c3d3, #a1e891);
+  height: 50px;
+  width: 100px;
+  border-radius: 20px;
 }
 
 </style>
