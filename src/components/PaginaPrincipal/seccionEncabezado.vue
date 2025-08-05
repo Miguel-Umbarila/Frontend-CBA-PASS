@@ -1,10 +1,11 @@
 <template>
   <div class="wrapper">
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <nav class="navbar navbar-expand-lg position-relative">
       <div id="logos">
         <img src="/public/cpas.png" alt="" class="logo" />
         <h5>CBA PASS</h5>
       </div>
+
       <div class="container-fluid">
         <button
           class="navbar-toggler"
@@ -17,39 +18,22 @@
         >
           <span class="navbar-toggler-icon"></span>
         </button>
+
         <div class="collapse navbar-collapse" id="navbarScroll">
-          <ul
-            class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll"
-            style="--bs-scroll-height: 100px"
-          >
+          <ul class="navbar-nav links-centrales">
             <li class="nav-item">
-              <router-link to="Inicio">Home</router-link>
+              <router-link to="/inicio">Home</router-link>
             </li>
             <li class="nav-item">
-              <router-link to="/form"> Login</router-link>
+              <router-link to="/form">Login</router-link>
             </li>
             <li class="nav-item">
-              <router-link to="/usuario"> Usuario</router-link>
+              <router-link to="/usuario">Usuario</router-link>
             </li>
-            <li class="nav-item dropdown">
-              <router-link to="/inicio-sesion"> Sign-up</router-link>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Home</a></li>
-                <li><a class="dropdown-item" href="#">Login</a></li>
-                <li><hr class="dropdown-divider" /></li>
-                <li><a class="dropdown-item" href="#">Sign-up</a></li>
-              </ul>
+            <li class="nav-item">
+              <router-link to="/inicio-sesion">Sign-up</router-link>
             </li>
           </ul>
-          <form class="d-flex" role="search">
-            <input
-              class="form-control me-2"
-              type="search"
-              placeholder="Search"
-              aria-label="Search"
-            />
-            <button class="btn btn-outline-success" type="submit">Search</button>
-          </form>
         </div>
       </div>
     </nav>
@@ -58,76 +42,65 @@
 </template>
 
 <style scoped>
-header {
-  background: red;
-  padding: 1rem;
-}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
 
 .logo {
-  display: grid;
   border-radius: 20rem;
   width: 6rem;
-  margin: 0 auto;
-  justify-content: center;
-  align-items: center;
 }
+
 #logos {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
   align-items: center;
-  width: 20rem;
+  gap: 1rem;
+  margin-right: 2rem;
+}
+
+#logos h5 {
+  color: white;
+  font-size: 1.5rem;
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
 }
 
 nav {
-  width: auto;
-  height: auto;
-  font-size: 12px;
-  text-align: center;
-  justify-content: space-around;
-  background: linear-gradient(to bottom, rgb(5, 155, 172, 255), rgb(123, 216, 88, 255));
+  width: 100%;
+  font-size: 14px;
+  background: linear-gradient(to bottom, #59c3d3, #a1e891);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 0 0 1rem 1rem;
+  padding: 1rem;
+  position: relative;
 }
 
 nav a.router-link-exact-active {
-  color: green;
+  color: #ffffff;
+  font-weight: bold;
 }
 
 nav a {
   display: inline-block;
   padding: 0 1rem;
-  border-left: 1px solid var(--color-border);
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  font-size: 1.2rem;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.1rem;
+  color: #00363a;
+  text-decoration: none;
+  transition: color 0.3s ease;
 }
 
-nav a:first-of-type {
-  border: 0;
+nav a:hover {
+  color: #ffffff;
 }
 
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
-
-  nav {
-    text-align: left;
-    margin-left: -1rem;
-    font-size: 1rem;
-
-    padding: 1rem 0;
-    margin-top: 1rem;
-  }
+/* Centramos los links exactamente en el centro horizontal */
+.links-centrales {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 </style>
