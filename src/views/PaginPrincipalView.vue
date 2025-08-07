@@ -1,5 +1,5 @@
 <script setup>
-import SeccionDesarrolladores from '@/components/PaginaPrincipal/seccionDesarrolladores.vue'
+import SeccionDesarrolladores from '@/components/PaginaPrincipal/MisionVision.vue'
 import SeccionInformacion from '@/components/PaginaPrincipal/seccionInformacion.vue'
 import seccionFutter from '@/components/PaginaPrincipal/seccionFutter.vue'
 </script>
