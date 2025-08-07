@@ -39,6 +39,8 @@
   </div>
 </template>
 
+<script setup></script>
+
 <style>
 /* Donde esta todo el contenido y para que sea sentrado */
 .contenido {

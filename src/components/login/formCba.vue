@@ -60,7 +60,7 @@
         <label class="form-check-label" for="exampleCheck1">Check me out</label>
       </div>
       <div class="buton">
-        <button type="button" class="btn btn-success">Siguiente</button>
+        <button type="submit" class="btn btn-success">Siguiente</button>
       </div>
       <div>
         <router-link to="/inicio-sesion">Ya tienes cuenta? Inicia Sesion</router-link>
