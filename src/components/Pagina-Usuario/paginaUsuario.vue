@@ -10,7 +10,11 @@
         <h1><a href="">Generar QR</a></h1>
       </div>
       <div id="edit" class="mb-3">
-        <h1><a href="">Editar Perfil</a></h1>
+        <router-link>
+          <h1>
+            <a href="">Editar Perfil</a>
+          </h1>
+        </router-link>
         <svg
           width="5rem"
           height="5rem"

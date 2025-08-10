@@ -8,10 +8,10 @@
         <h1>CBA PASS</h1>
       </div>
       <div class="mb-3">
-        <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Nombre" />
+        <input type="text" class="form-control" placeholder="Nombre" />
       </div>
       <div class="mb-3">
-        <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Apellido" />
+        <input type="text" class="form-control" placeholder="Apellido" />
       </div>
       <div class="mb-3">
         <label for="">Tipo Documento: </label>
@@ -21,12 +21,7 @@
         </select>
       </div>
       <div class="mb-3">
-        <input
-          type="text"
-          class="form-control"
-          id="exampleInputPassword1"
-          placeholder="Numero de Identidad"
-        />
+        <input type="text" class="form-control" placeholder="Numero de Identidad" />
       </div>
       <div class="mb-3">
         <label for="">Rol:</label>
@@ -45,15 +40,10 @@
         />
       </div>
       <div class="mb-3">
-        <input
-          type="password"
-          class="form-control"
-          id="exampleInputPassword1"
-          placeholder="Contraseña"
-        />
+        <input type="password" class="form-control" placeholder="Contraseña" />
       </div>
       <div class="mb-3">
-        <input type="tel" class="form-control" id="exampleInputPassword1" placeholder="Celular" />
+        <input type="tel" class="form-control" placeholder="Celular" />
       </div>
       <div class="mb-3 form-check">
         <input type="checkbox" class="form-check-input" id="exampleCheck1" />
@@ -70,6 +60,36 @@
 </template>
 
 <script setup></script>
+<script>
+import axios from 'axios'
+export default {
+  name: 'formCba',
+  data() {
+    return {
+      datos: {
+        nombre: '',
+        apellido: '',
+        tipo_documento: '',
+        numero_identidad: '',
+        rol: '',
+        email: '',
+        password: '',
+        celular: '',
+      },
+    }
+  },
+  mounted() {
+    axios
+      .get('http://127.0.0.1:8000/registro/datos-Usuario//')
+      .then((response) => {
+        this.datos = response.data
+      })
+      .catch((error) => {
+        console.error('Error ', error)
+      })
+  },
+}
+</script>
 
 <style>
 .formulario {
